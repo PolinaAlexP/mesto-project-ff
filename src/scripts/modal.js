@@ -28,10 +28,6 @@ export function handleCloseButtonClick(evt) {
 //Функция закрытия попапа по Esc. Должен находиться в папке modal.js
 function handleEscKey(evt) {
   if (evt.key === 'Escape') {
-    const popups = document.querySelectorAll('.popup_is-opened');
-    for (let i = 0; i < popups.length; i++) {
-      closePopup(popups[i]);
-      break;
-    }
-  }
+  closePopup(document.querySelector('.popup_is-opened'));
+ }
 };
